@@ -11,12 +11,14 @@ import Icons from '@components/home/Icons.astro'
 
 <BaseLayout>
   <MastHead />
-  <div class="container-xxl bd-gutter masthead-followup">
-    <GetStarted />
-    <Customize />
-    <CSSVariables />
-    <ComponentUtilities />
-    <Plugins />
-    <Icons />
+  <div class="container-xxl bd-gutter">
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+      <GetStarted />
+      <Customize />
+      <CSSVariables />
+      <ComponentUtilities />
+      <Plugins />
+      <Icons />
+    </div>
   </div>
 </BaseLayout>

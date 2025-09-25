@@ -1,0 +1,17 @@
+/* Tailwind base layers */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom docs utilities to mimic container spacing previously done by Bootstrap */
+.container-xxl {
+  @apply container mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Any bd-gutter class references mapped to spacing utilities */
+.bd-gutter {
+  @apply my-8;
+}
+
+/* Add any small helper mappings for headings and paragraphs if needed later */
+/* .bd-lead { @apply text-lg text-gray-600; } */
