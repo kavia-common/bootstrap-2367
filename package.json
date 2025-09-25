@@ -39,6 +39,7 @@
   "sass": "scss/bootstrap.scss",
   "style": "dist/css/bootstrap.css",
   "scripts": {
+    "dev": "astro dev --root site --port 9001",
     "start": "npm-run-all --parallel docs-serve",
     "docs-serve": "astro dev --root site --port 9001",
     "docs-build": "astro build --root site && rm -rf _site && cp -r site/dist _site",
