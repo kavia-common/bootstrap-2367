@@ -186,33 +186,51 @@
     },
     {
       "files": [
-        "site/**"
+        "site/**/*.astro"
+      ],
+      "extends": [
+        "plugin:astro/recommended"
+      ],
+      "parser": "astro-eslint-parser",
+      "parserOptions": {
+        "parser": "@typescript-eslint/parser",
+        "extraFileExtensions": [".astro"],
+        "sourceType": "module",
+        "ecmaVersion": 2020
+      },
+      "rules": {
+        "indent": "off",
+        "multiline-ternary": "off",
+        "unicorn/filename-case": "off",
+        "unicorn/no-array-for-each": "off",
+        "unicorn/prefer-module": "off"
+      }
+    },
+    {
+      "files": [
+        "site/**/*.mjs",
+        "site/astro.config.mjs"
+      ],
+      "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 2020
+      }
+    },
+    {
+      "files": [
+        "site/**/*.js"
       ],
       "env": {
         "browser": true,
         "node": false
       },
       "parserOptions": {
-        "sourceType": "script",
-        "ecmaVersion": 2019
+        "sourceType": "module",
+        "ecmaVersion": 2020
       },
       "rules": {
         "no-new": "off",
         "unicorn/no-array-for-each": "off"
-      }
-    },
-    {
-      "files": [
-        "site/src/assets/application.js",
-        "site/src/assets/partials/*.js",
-        "site/src/assets/search.js",
-        "site/src/assets/snippets.js",
-        "site/src/assets/stackblitz.js",
-        "site/src/plugins/*.js"
-      ],
-      "parserOptions": {
-        "sourceType": "module",
-        "ecmaVersion": 2020
       }
     },
     {

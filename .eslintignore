@@ -1,9 +1,14 @@
-**/*.min.js
-**/dist/
-**/vendor/
-/_site/
-/site/public/
-/js/coverage/
-/site/static/sw.js
-/site/static/docs/**/assets/sw.js
-/site/layouts/partials/
+# Ignore dependencies
+node_modules
+# Ignore build outputs
+dist
+build
+_site
+
+# Ignore Astro docs site for CI linting
+site/**/*.astro
+site/**/*.mjs
+site/**/*.md
+site/**/*.mdx
+site/static/**
+site/src/**

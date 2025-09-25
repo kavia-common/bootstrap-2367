@@ -2,7 +2,8 @@ import { defineConfig } from 'astro/config';
 
 export default defineConfig({
   srcDir: './src',
-  server: { port: 9001 },
+  // Updated to align with container readiness probe expecting port 3000
+  server: { port: 3000 },
   vite: {
     resolve: {
       alias: {
